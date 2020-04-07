@@ -1,0 +1,19 @@
+Package: nodemaker
+Title: Reformats dataframes into an appropriate structure for igraph and visNetwork diagrams
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Shane",
+           family = "Jackson",
+           role = c("aut", "cre"),
+           email = "shane.jackson@gmx.co.uk",
+           comment = c(ORCID = "0000-0001-5130-7553"))
+Description: This packages can work flexibly with source dataframes to get them into the right format for igraph and visNetwork visualisations. Some routine formatting may have to be carried out first.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
+Imports: 
+    dplyr,
+    magrittr,
+    tibble
