@@ -8,8 +8,6 @@
 #' @return A dataframe containign details of connections between nodes via 'connecting objects'.
 #' @importFrom dplyr distinct
 #' @importFrom dplyr mutate
-#' @importFrom dplyr ungroup
-#' @importFrom dplyr row_number
 #' @export
 
 make_connections <- function(
@@ -20,7 +18,5 @@ make_connections <- function(
 
   data %>%
     distinct({{node_col}}, {{connect_col}}) %>%
-    group_by({{node_col}}) %>%
-    mutate(node_number = row_number()) %>%
-    ungroup()
+    mutate(node_number = match({{node_col}}, unique({{node_col}})))
 }

@@ -4,22 +4,12 @@
 \alias{make_nodes}
 \title{Reformat dataframes in an appropriate format for network analysis.}
 \usage{
-make_nodes(
-  connection_data,
-  connection_node_col,
-  attribute_data,
-  attribute_node_col,
-  ... = NULL
-)
+make_nodes(attribute_data, node_col, ...)
 }
 \arguments{
-\item{connection_data}{Dataframe holding the information you'd like to reformat}
-
-\item{connection_node_col}{The field containing the node ids/values in \code{connection_data}}
-
 \item{attribute_data}{Dataframe containing node attribute data}
 
-\item{attribute_node_col}{Column name in \code{attribute_data} that contains the unique common node identifier}
+\item{node_col}{Column name in \code{attribute_data} that contains the unique common node identifier}
 
 \item{...}{Attribute variables in \code{attribute_data}}
 }

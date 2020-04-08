@@ -18,6 +18,7 @@
 #' @importFrom dplyr select
 #' @importFrom dplyr n
 #' @importFrom dplyr left_join
+#' @importFrom dplyr ungroup
 #' @export
 
 make_edges <- function(
