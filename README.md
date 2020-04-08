@@ -21,7 +21,7 @@ You can install the package using RStudio’s tool, or via the following
 code, using the listed file location.
 
 ``` r
-#add link later
+devtools::install_github("shanej90/nodemaker")
 ```
 
 ## Functionality
