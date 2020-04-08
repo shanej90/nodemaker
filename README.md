@@ -21,7 +21,7 @@ You can install the package using RStudio’s tool, or via the following
 code, using the listed file location.
 
 ``` r
-#insert github link at a later time
+#add link later
 ```
 
 ## Functionality
