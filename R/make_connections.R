@@ -6,8 +6,6 @@
 #' @param node_col The \code{data} column containing identifiers for nodes
 #' @param connect_col The \code{data} column containing the ids of objects connecting nodes, for example, project IDs, locations, mentees
 #' @return A dataframe containign details of connections between nodes via 'connecting objects'.
-#' @importFrom dplyr distinct
-#' @importFrom dplyr mutate
 #' @export
 
 make_connections <- function(
@@ -17,6 +15,6 @@ make_connections <- function(
 ) {
 
   data %>%
-    distinct({{node_col}}, {{connect_col}}) %>%
-    mutate(node_number = match({{node_col}}, unique({{node_col}})))
+    dplyr::distinct({{node_col}}, {{connect_col}}) %>%
+    dplyr::mutate(node_number = match({{node_col}}, unique({{node_col}})))
 }
