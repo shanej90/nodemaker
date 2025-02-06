@@ -33,6 +33,7 @@ devtools::install_github("shanej90/nodemaker")
 * Prepare a list of nodes with any additional attributes desired, assuming the source data is held in a single dataframe. Use `make_nodes()`.
 * Create a 'long' dataframe detailing nodes and their associated 'connecting objects' to other nodes. Use `make_connections()`.
 * Create an edges dataframe, showing how nodes are connected, including relative weightings. Use `make_edges()`.
+* Templates for plotting via the `tidygraph` package.
   
 As an example, say you want to consider how people have collaborated on projects. In this case, the people (or rather their unique IDs) would be the nodes. The projects they have worked on would be the 'connecting objects'. The edges would show connections between people, based on how many projects they had collaborated on.
 

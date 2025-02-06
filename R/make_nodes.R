@@ -15,8 +15,8 @@ make_nodes <- function(
   ...
 ) {
 
-  attribute_data %>%
-    dplyr::select({{node_col}}, ...) %>%
-    dplyr::distinct({{node_col}}, .keep_all = T) %>%
+  attribute_data |>
+    dplyr::select({{node_col}}, ...) |>
+    dplyr::distinct({{node_col}}, .keep_all = T) |>
     tibble::rowid_to_column("id")
 }
