@@ -1,6 +1,6 @@
 #' Create a dataframe listing nodes and details of how they connect to other nodes
 #'
-#' Creates a df of unique nodes and vertices combinations. For example, it might list all team members/nodes working on projects, connected via a project ID.
+#' Creates a dataframe of unique nodes and vertices combinations. For example, it might list all team members/nodes working on projects, connected via a project ID.
 #'
 #' @param data Dataframe holding the information you'd like to reformat
 #' @param node_col The \code{data} column containing identifiers for nodes
@@ -16,8 +16,12 @@ make_connections <- function(
   weight_col = NULL
   ) {
 
+  weight_col_quo <- rlang::enquo(weight_col)
+
   #error checking
-  if(!is.numeric(data |> dplyr::pull({{weight_col}}))) {
+  if(!rlang::quo_is_null(weight_col_quo)) {
+
+    if(!is.numeric(dplyr::pull(data, {{weight_col}})))
 
     stop("`weight_col` must be numeric.")
 

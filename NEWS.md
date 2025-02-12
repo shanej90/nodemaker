@@ -1,4 +1,4 @@
-# nodemaker 0.0.1
+# nodemaker 0.1
 
 * Switched all use of `magrittr` pipe (`%>%`) to native R pipe.
 * Added functionality to help with plotting network diagrams.

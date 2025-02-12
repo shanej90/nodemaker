@@ -1,6 +1,6 @@
 Package: nodemaker
 Title: Prepare data for use in network diagrams and get started with plotting
-Version: 0.0.1
+Version: 0.1
 Authors@R: 
     c(
     person(given = "Shane",
@@ -21,13 +21,10 @@ RoxygenNote: 7.0.2
 Imports: 
     dplyr,
     ggplot2,
-    ggraph,
-    igraph,
     lookup,
     magrittr,
     rlang,
-    tibble,
-    tidygraph
+    tibble
 Suggests: 
     knitr,
     rmarkdown,
