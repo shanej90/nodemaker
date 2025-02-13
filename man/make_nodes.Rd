@@ -11,11 +11,11 @@ make_nodes(attribute_data, node_col, ...)
 
 \item{node_col}{Column name in \code{attribute_data} that contains the unique common node identifier}
 
-\item{...}{Attribute variables in \code{attribute_data}}
+\item{...}{Attribute variables in \code{attribute_data}. Note the function assumes there is only one value for each attribute per node.}
 }
 \value{
-A df of nodes as per \code{node_col}
+A dataframe of nodes as per \code{node_col}
 }
 \description{
-Take a data frame and create a df of unique nodes containing their df unique ids, and a 'node id' as well.
+Take a data frame and create a dataframe of unique nodes containing their dataframe unique ids, and a 'node id' as well.
 }

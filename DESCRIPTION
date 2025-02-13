@@ -1,6 +1,6 @@
 Package: nodemaker
-Title: Reformats dataframes into an appropriate structure for igraph and visNetwork diagrams
-Version: 0.0.0.9000
+Title: Prepare data for use in network diagrams and get started with plotting
+Version: 0.1
 Authors@R: 
     c(
     person(given = "Shane",
@@ -13,16 +13,20 @@ Authors@R:
            role = "ctb")
            )
 Description: This packages can work flexibly with source dataframes to get them into the right format for igraph and visNetwork visualisations. Some routine formatting may have to be carried out first.
-License: GPL-3
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.3.2
 Imports: 
     dplyr,
+    lookup,
     magrittr,
+    rlang,
     tibble
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3

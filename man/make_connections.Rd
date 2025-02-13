@@ -4,7 +4,7 @@
 \alias{make_connections}
 \title{Create a dataframe listing nodes and details of how they connect to other nodes}
 \usage{
-make_connections(data, node_col, connect_col)
+make_connections(data, node_col, connect_col, weight_col = NULL)
 }
 \arguments{
 \item{data}{Dataframe holding the information you'd like to reformat}
@@ -12,10 +12,12 @@ make_connections(data, node_col, connect_col)
 \item{node_col}{The \code{data} column containing identifiers for nodes}
 
 \item{connect_col}{The \code{data} column containing the ids of objects connecting nodes, for example, project IDs, locations, mentees}
+
+\item{weight_col}{A column from \code{data} containing quantitative information to set edge width for connections in \code{make_edges()}. Optional.}
 }
 \value{
-A dataframe containign details of connections between nodes via 'connecting objects'.
+A dataframe containing details of connections between nodes via 'connecting objects'. Will include a unique \code{node_number} column for use in downstream functions. Note this dataframe can have duplicate node-connecting object rows depending on the nature of the source dataframe.
 }
 \description{
-Creates a df of unique nodes and vertices combinations. For example, it might list all team members/nodes working on projects, connected via a project ID.
+Creates a dataframe of unique nodes and vertices combinations. For example, it might list all team members/nodes working on projects, connected via a project ID.
 }

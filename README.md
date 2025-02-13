@@ -29,13 +29,13 @@ devtools::install_github("shanej90/nodemaker")
 `nodemaker` can be used to prepare data for network diagram production.
 There are three main purposes:
 
-  - Prepare a list of nodes with any additional attributes desired,
-    assuming the source data is held in a single dataframe. Use
-    `make_nodes()`.
-  - Create a ‘long’ dataframe detailing nodes and their associated
-    ‘connecting objects’ to other nodes. Use `make_connections()`.
-  - Create an edges dataframe, showing how nodes are connected,
-    including relative weightings. Use `make_edges()`.
+- Prepare a list of nodes with any additional attributes desired,
+  assuming the source data is held in a single dataframe. Use
+  `make_nodes()`.
+- Create a ‘long’ dataframe detailing nodes and their associated
+  ‘connecting objects’ to other nodes. Use `make_connections()`.
+- Create an edges dataframe, showing how nodes are connected, including
+  relative weightings. Use `make_edges()`.
 
 As an example, say you want to consider how people have collaborated on
 projects. In this case, the people (or rather their unique IDs) would be
