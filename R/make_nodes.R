@@ -13,7 +13,7 @@ make_nodes <- function(
   attribute_data,
   node_col,
   ...
-) {
+  ) {
 
   attribute_data |>
     dplyr::select({{node_col}}, ...) |>
