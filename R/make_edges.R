@@ -132,11 +132,16 @@ make_edges <- function(
 
   }
 
+  #node id col name
+  node_col <- connections_data |>
+    dplyr::select({{node_id}}) |>
+    colnames()
+
   #bring back in numeric id to enable duplicate checking
     weights |>
       dplyr::mutate(
-        node_number_1 = lookup::vlookup(from, connections_data, "from", "node_number"),
-        node_number_2 = lookup::vlookup(to, connections_data, "from", "node_number")
+        node_number_1 = lookup::vlookup(from, connections_data, node_col, "node_number"),
+        node_number_2 = lookup::vlookup(to, connections_data, node_col, "node_number")
         ) |>
       #duplicate checking
       dplyr::mutate(
